@@ -14,7 +14,7 @@
 	<c:out value="${cumensaje}" />
 	</c:if>
 	
-	<form action="CrearUser" method="post">
+	<form action="AgregarUser" method="post">
 		<table>
 			<tr>
 				<td>Rut</td>
@@ -48,6 +48,8 @@
 		<button onclick="window.location.href='${pageContext.request.contextPath}/Administrador';">
 		Volver
     	</button>
+    	<br/>
+		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>
 	
 </body>
 </html>

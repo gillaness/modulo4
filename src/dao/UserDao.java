@@ -166,6 +166,31 @@ public class UserDao implements IUserDao {
 			
 			return u;
 		}
+
+	@Override
+	public boolean eliminarUsuario(User user) {
+		// TODO Auto-generated method stub
+		Connection con = null;
+		Statement stm = null;
+		
+		boolean eliminar = false;
+		
+		String sql = "DELETE FROM usuario WHERE idusuario = " + user.getId();
+		
+		try {
+			con = ConexionSingleton.getConnection();
+			stm = con.createStatement();
+			stm.execute(sql);
+			eliminar = true;
+			stm.close();
+			//con.close();
+		}catch(SQLException e) {
+			System.out.println("Error: Clase UsuarioDao, método eliminarUsuario");
+			e.printStackTrace();
+		}
+		
+		return eliminar;
+	}
 	
 
 	

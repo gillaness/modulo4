@@ -11,11 +11,16 @@
 <body>
 	<h3>Listado de Usuarios del Sistema</h3>
 	
+<c:if test="${mensaje != null}">
+	<c:out value="${mensaje}" />
+</c:if>
+	
 	<table>
 		<tr>
 			<th>Nombre</th>
 			<th>ID</th>
 			<th>Cargo</th>
+			<th>Acciones</th>
 		</tr>
 		
 	<c:forEach items="${listausers}" var="user">
@@ -24,7 +29,7 @@
 			<td>${user.getId()}</td>
 			<td>${user.getPerfil()}</td>
 			
-			<td><a href="${pageContext.request.contextPath}/ModificarUser?id=${user.getId()}">Editar</a></td>
+			<td><a href="${pageContext.request.contextPath}/ModificarUser?id=${user.getId()}">Editar</a> &nbsp; <a href="${pageContext.request.contextPath}/BorrarUsuario?id=${user.getId()}">Eliminar</a></td>
 			
 		</tr>	
 	</c:forEach>
@@ -34,6 +39,9 @@
 	<button onclick="window.location.href='${pageContext.request.contextPath}/Administrador';">
 	Volver
     </button>
+    
+    <br/>
+		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>
 	
 </body>
 </html>

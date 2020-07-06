@@ -26,5 +26,9 @@
 	
 	</form>
 	
+	
+	<br/>
+		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>
+	
 </body>
 </html>

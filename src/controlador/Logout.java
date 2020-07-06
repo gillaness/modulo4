@@ -11,14 +11,14 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class CerrarSesion
  */
-@WebServlet("/CerrarSesion")
-public class CerrarSesion extends HttpServlet {
+@WebServlet("/Logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CerrarSesion() {
+    public Logout() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,8 +30,8 @@ public class CerrarSesion extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		HttpSession misession= (HttpSession) request.getSession(); 
-		misession.invalidate();
+		HttpSession sesiones= (HttpSession) request.getSession(); 
+		sesiones.invalidate();
 		String mensaje = "La sesión ha sido cerrada";
 		request.setAttribute("lmensaje", mensaje);
 		request.getRequestDispatcher("Login.jsp").forward(request, response);

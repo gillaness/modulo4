@@ -57,27 +57,36 @@ public class ModificarUser extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession sesiones = (HttpSession) request.getSession(); 
+		User suser= (User) sesiones.getAttribute("Admin");
 		
-		String id = request.getParameter("userId");
-		String nombre = request.getParameter("nombre");
-		String password = DigestUtils.md5Hex(request.getParameter("password")).toUpperCase();
-		int perfil = Integer.parseInt(request.getParameter("perfil"));
+		if (suser == null || suser.getId().trim() == "" ) {
+			request.getRequestDispatcher("Login.jsp").forward(request, response);
+		}
+		else {
+			String id = request.getParameter("userId");
+			String nombre = request.getParameter("nombre");
+			String password = DigestUtils.md5Hex(request.getParameter("password")).toUpperCase();
+			int perfil = Integer.parseInt(request.getParameter("perfil"));
+			
+			User user = new User(id, nombre, password,perfil);
+			
+			UserDao userdao = new UserDao();
+			
+			boolean editar = userdao.editarUser(user);
+			
+			String mensaje ="";
+			
+			if(editar)
+				mensaje = "Se han actualizado los datos del usuario";
+			else
+				mensaje = "No se actualizaron los datos del usuario";
+			
+			request.setAttribute("mensaje", mensaje);
+			request.setAttribute("datos", user);
+			request.getRequestDispatcher("EditarUsuario.jsp").forward(request, response);
+		}
 		
-		User user = new User(id, nombre, password,perfil);
-		
-		UserDao userdao = new UserDao();
-		
-		boolean editar = userdao.editarUser(user);
-		
-		String mensaje ="";
-		
-		if(editar)
-			mensaje = "Se han actualizado los datos del usuario";
-		else
-			mensaje = "No se actualizaron los datos del usuario";
-		
-		request.setAttribute("mensaje", mensaje);
-		request.getRequestDispatcher("EditarUsuario.jsp").forward(request, response);
 	}
 
 }
