@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+
+}
+body{
+	background-color: #DEDEDE;
+	display:flex;
+	min-heigth: 100vh;
+	
+}
+
+.contenedor{
+	text-align: center;
+	width:80%;
+	max-width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+	box-sizing: border-box;
+
+}
+form{
+	margin: auto;
+	width:100%;
+	max-width: 200px;
+	padding: 5px;
+	border: 1px solid rgba(0,0)
+	
+}
+h3{
+	text-align:center;
+	margin-bottom: 5px;
+	color: rgba(0,0,0,0.5);
+	
+}
+input{
+	text-align: center;
+	display: block;
+	padding: 5px;
+	width: 100%;
+	margin:3px 0;
+	
+}
+
+a{
+	text-align: center;
+}
+a:hover {
+  font-size:20px;
+  color:#100;
+  
+}
