@@ -19,8 +19,8 @@
     	<h2>Mantencion de Clientes Empresas</h2> 
                 <table>
                     <tr>
-                    <td><a href="#">Crear Nuevo Cliente Empresa</a><td>
-                    <td><a href="#">Ver Listado de Clientes Empresa</a><td>
+                    <td><a href="${pageContext.request.contextPath}/CrearEmpresa">Crear Nuevo Cliente Empresa</a><td>
+                    <td><a href="${pageContext.request.contextPath}/ListaEmpresas">Ver Listado de Clientes Empresa</a><td>
                     </tr>
                 </table>
                 
