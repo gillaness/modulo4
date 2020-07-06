@@ -5,9 +5,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Crea Agenda</title>
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-	<h1> Crear Agenda</h1>
+	<div class="contenedor">
+	<h3> Crear Agenda</h3>
 	<form action="Agenda" method="post">
 	
 		Nombre Empresa :
@@ -27,7 +30,7 @@
 		
 		<input type="submit" value="Aceptar">
 	</form>
-
+	</div>
 
 </body>
 </html>

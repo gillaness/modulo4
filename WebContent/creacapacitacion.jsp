@@ -10,9 +10,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-	<h1>Crear Capacitacion</h1>
+	<div class="contenedor">
+	<h3>Crear Capacitacion</h3>
 	<form action="Agenda" method="post">
 
 		Nombre Empresa : <select name="empresa">
@@ -31,7 +34,7 @@ Fecha Visita 1: <fmt:formatDate value="${datosusuario.getfechaVisita()}" type="d
 			type="checkbox"><br> <input type="submit"
 			value="Aceptar">
 	
-
+	</div>
 
 </body>
 </html>

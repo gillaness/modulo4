@@ -5,8 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Sistema APRL</title>
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
+	<div class="contenedor">
 	<h3>Bienvenido. Favor ingresa tu usuario y clave para ingresar</h3>
 	<c:if test="${lmensaje != null}">
 	<h3><c:out value="${lmensaje}"></c:out></h3>
@@ -16,16 +19,16 @@
 		<table>
 			<tr>
 			<td><label for="user">Usuario</label></td>
-			<td><input type="text" name="user"></td>
+			<td><input type="text" placeholder="Usuario" name="user"></td>
 			</tr>
 			<tr>
 			<td><label for="pass">Clave</label></td>
-			<td><input type="password" name="pass"></td>
+			<td><input type="password" placeholder="Contraseña" name="pass"></td>
 			</tr>
 		</table>
 		<br>
 		<input type="submit" value="Ingresar">
 	</form>
-	
+	</div>
 </body>
 </html>
