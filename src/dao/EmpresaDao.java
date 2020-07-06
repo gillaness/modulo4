@@ -83,19 +83,83 @@ public class EmpresaDao implements IEmpresaDao {
 	@Override
 	public boolean editarEmpresa(Empresa empresa) {
 		// TODO Auto-generated method stub
-		return false;
+		Connection con = null;
+		Statement stm = null;
+		
+		boolean editar = false;
+		
+		String sql = "UPDATE empresa SET nombreempresa = '" + empresa.getNombreEmpresa() + "', direccion = '" + empresa.getDireccion() + "', contacto = '" + empresa.getContacto() + "', telefono = '"+empresa.getTelefono()+"', mailcontacto = '"+empresa.getMailContacto()+"' WHERE idempresa = '" + empresa.getRutEmpresa() + "'";
+		
+		try {
+			con = ConexionSingleton.getConnection();
+			stm = con.createStatement();
+			stm.execute(sql);
+			editar = true;
+			stm.close();
+		}catch(SQLException e) {
+			System.out.println("Error: Clase EmpresaDao, método editarEmpresa");
+			e.printStackTrace();
+		}
+		
+		return editar;
 	}
 
 	@Override
 	public Empresa obtenerRut(String rutEmpresa) {
 		// TODO Auto-generated method stub
-		return null;
+		Connection con = null;
+		Statement stm = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from empresa where idempresa = " + rutEmpresa;
+		
+		Empresa em = new Empresa();
+			try {
+				con = ConexionSingleton.getConnection();
+				stm = con.createStatement();
+				rs = stm.executeQuery(sql);
+				while (rs.next()) {
+					em.setRutEmpresa(rs.getString(1));
+					em.setNombreEmpresa(rs.getString(2));
+					em.setDireccion(rs.getString(3));
+					em.setContacto(rs.getString(4));
+					em.setTelefono(rs.getString(5));
+					em.setMailContacto(rs.getString(6));
+
+				}
+				stm.close();
+				rs.close();
+			}catch(SQLException e) {
+				System.out.println("Error: Clase EmpresaDao, método obtenerRut");
+				e.printStackTrace();
+			}
+			
+			return em;
 	}
 
 	@Override
 	public boolean eliminarEmpresa(Empresa empresa) {
 		// TODO Auto-generated method stub
-		return false;
+		Connection con = null;
+		Statement stm = null;
+		
+		boolean eliminar = false;
+		
+		String sql = "DELETE FROM empresa WHERE idempresa = " + empresa.getRutEmpresa();
+		
+		try {
+			con = ConexionSingleton.getConnection();
+			stm = con.createStatement();
+			stm.execute(sql);
+			eliminar = true;
+			stm.close();
+		}catch(SQLException e) {
+			System.out.println("Error: Clase EmpresaDao, método eliminarEmpresa");
+			e.printStackTrace();
+		}
+		
+		return eliminar;
 	}
+	
 
 }

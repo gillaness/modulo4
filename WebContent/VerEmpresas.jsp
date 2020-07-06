@@ -34,7 +34,7 @@
 			<td>${empresa.getTelefono()}</td>
 			<td>${empresa.getMailContacto()}</td>
 			
-			<td><a href="${pageContext.request.contextPath}/ModificarEmpresa?id=${empresa.getRutEmpresa()}">Editar</a> &nbsp; <a href="${pageContext.request.contextPath}/BorrarEmpresa?id=${empresa.getRutEmpresa()}">Eliminar</a></td>
+			<td><a href="${pageContext.request.contextPath}/ModificarEmpresa?rut=${empresa.getRutEmpresa()}">Editar</a> &nbsp; <a href="${pageContext.request.contextPath}/BorrarEmpresa?rut=${empresa.getRutEmpresa()}">Eliminar</a></td>
 			
 		</tr>	
 	</c:forEach>

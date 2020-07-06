@@ -183,7 +183,6 @@ public class UserDao implements IUserDao {
 			stm.execute(sql);
 			eliminar = true;
 			stm.close();
-			//con.close();
 		}catch(SQLException e) {
 			System.out.println("Error: Clase UsuarioDao, método eliminarUsuario");
 			e.printStackTrace();
