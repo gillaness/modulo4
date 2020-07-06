@@ -1,9 +1,6 @@
 package controlador;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,12 +40,13 @@ public class ModificarUser extends HttpServlet {
 			request.getRequestDispatcher("Login.jsp").forward(request, response);
 		}
 		else {
+			String userId = request.getParameter("id");
+			
 			UserDao userdao = new UserDao();
-			List<User> lusuarios = new ArrayList<User>();
+			User user = new User();
+			user = userdao.obtenerId(userId);
 			
-			lusuarios = userdao.mostrarUser();
-			
-			request.setAttribute("listausers", lusuarios);
+			request.setAttribute("datos", user);
 			request.getRequestDispatcher("EditarUsuario.jsp").forward(request, response);
 		}
 		
@@ -78,7 +76,6 @@ public class ModificarUser extends HttpServlet {
 		else
 			mensaje = "No se actualizaron los datos del usuario";
 		
-		request.setAttribute("datos", user);
 		request.setAttribute("mensaje", mensaje);
 		request.getRequestDispatcher("EditarUsuario.jsp").forward(request, response);
 	}

@@ -23,6 +23,9 @@
 			<td>${user.getNombre()}</td>
 			<td>${user.getId()}</td>
 			<td>${user.getPerfil()}</td>
+			
+			<td><a href="${pageContext.request.contextPath}/ModificarUser?id=${user.getId()}">Editar</a></td>
+			
 		</tr>	
 	</c:forEach>
 		

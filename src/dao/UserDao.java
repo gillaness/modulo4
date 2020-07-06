@@ -111,7 +111,7 @@ public class UserDao implements IUserDao {
 	}
 
 	@Override
-	public boolean editarUser(User usuario) {
+	public boolean editarUser(User user) {
 		// TODO Auto-generated method stub
 		
 		Connection con = null;
@@ -119,7 +119,7 @@ public class UserDao implements IUserDao {
 		
 		boolean editar = false;
 		
-		String sql = "UPDATE usuario SET nombre ='"+usuario.getNombre()+"', password = '"+usuario.getPassword()+"',' perfil = "+usuario.getPerfil()+"' WHERE id = '"+usuario.getId()+"'";
+		String sql = "UPDATE usuario SET nombre = '" + user.getNombre() + "', password = '" + user.getPassword() + "', idperfil = '" + user.getPerfil() + "' WHERE idusuario = '" + user.getId() + "'";
 		
 		try {
 			con = ConexionSingleton.getConnection();

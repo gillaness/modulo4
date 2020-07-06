@@ -10,24 +10,22 @@
 <body>
 	<h3>Editar Usuarios</h3>
 	
+	<c:if test="${mensaje != null}">
+	<c:out value="${mensaje}" />
+	</c:if>
 	
 	<form action="ModificarUser" method="post">
 	<table>
 		<tr>
-		<td>Selecciona un usuario</td>
-		<td><select name="userId">	
-		<c:forEach items="${listausers}" var="user">
-			<option value="${user.getId()}">${user.getId()}</option>	
-		</c:forEach>
-			</select></td>
+		<td><input type="hidden" name="userId" value="${datos.getId()}"></td>
 		</tr>
 		<tr>
 		<td>Nombre</td>
-		<td><input type="text" name="nombre" value="${lusuarios.getNombre()}"></td>
+		<td><input type="text" name="nombre" value="${datos.getNombre()}"></td>
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="password" name="password" value="${lusuarios.getPassword()}"></td>
+		<td><input type="password" name="password"></td>
 		</tr>
 		<tr>
 		<td>Perfil</td>
