@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,18 +12,19 @@
 <body>
 	<div class="contenedor">
 	<h3> Crear Agenda</h3>
-	<form action="Agenda" method="post">
+	<form action="CrearAgenda" method="post">
 	
 		Nombre Empresa :
-<select name="empresa">
-   <option value="1">Empresa 1</option> 
-   <option value="2">Empresa 1</option> 
-   <option value="3">Empresa 2</option>
-</select>
+		<select name="empresa">
+		<c:forEach items="${listaempresas}" var="empresa">
+			<option value="${empresa.getRutEmpresa()}">${empresa.getNombreEmpresa()}</option>
+		</c:forEach>  
+		  
+		</select>
 		<br>	
 		Fecha Visita : <input type="text" name="visita">
 		<br>
-		Hora Visita : <input type="password" name="hora">
+		Hora Visita : <input type="text" name="hora">
 		<br>
 	
 		OK <input type="checkbox" ><br>
