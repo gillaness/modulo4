@@ -68,8 +68,9 @@ public class ModificarUser extends HttpServlet {
 			String nombre = request.getParameter("nombre");
 			String password = DigestUtils.md5Hex(request.getParameter("password")).toUpperCase();
 			int perfil = Integer.parseInt(request.getParameter("perfil"));
+			int empresa = Integer.parseInt(request.getParameter("empresa"));
 			
-			User user = new User(id, nombre, password,perfil);
+			User user = new User(id, nombre, password,perfil, empresa);
 			
 			UserDao userdao = new UserDao();
 			

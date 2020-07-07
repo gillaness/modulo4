@@ -23,7 +23,7 @@ public class UserDao implements IUserDao {
 		Statement stm = null;
 		Connection con = null;
 		
-		String sql = "INSERT INTO usuario VALUES ('"+usuario.getId()+"' , '"+usuario.getNombre()+"' ,'"+usuario.getPassword()+"', '"+usuario.getPerfil()+"')";
+		String sql = "INSERT INTO usuario VALUES ('"+usuario.getId()+"' , '"+usuario.getNombre()+"' ,'"+usuario.getPassword()+"', '"+usuario.getPerfil()+"', '"+usuario.getEmpresa()+"')";
 		
 		try {
 			con = ConexionSingleton.getConnection();
@@ -57,6 +57,7 @@ public class UserDao implements IUserDao {
 				u.setNombre(rs.getString(2));
 				u.setPassword(rs.getString(3));
 				u.setPerfil(rs.getInt(4));
+				u.setEmpresa(rs.getInt(5));
 
 			}
 			stm.close();
@@ -93,6 +94,7 @@ public class UserDao implements IUserDao {
 				c.setNombre(rs.getString(2));
 				c.setPassword(rs.getString(3));
 				c.setPerfil(rs.getInt(4));
+				c.setEmpresa(rs.getInt(5));
 
 				listaUsuarios.add(c);
 			}
@@ -119,7 +121,7 @@ public class UserDao implements IUserDao {
 		
 		boolean editar = false;
 		
-		String sql = "UPDATE usuario SET nombre = '" + user.getNombre() + "', password = '" + user.getPassword() + "', idperfil = '" + user.getPerfil() + "' WHERE idusuario = '" + user.getId() + "'";
+		String sql = "UPDATE usuario SET nombre = '" + user.getNombre() + "', password = '" + user.getPassword() + "', idperfil = '" + user.getPerfil() + "', '"+user.getEmpresa()+"' WHERE idusuario = '" + user.getId() + "'";
 		
 		try {
 			con = ConexionSingleton.getConnection();
@@ -155,6 +157,7 @@ public class UserDao implements IUserDao {
 					u.setNombre(rs.getString(2));
 					u.setPassword(rs.getString(3));
 					u.setPerfil(rs.getInt(4));
+					u.setEmpresa(rs.getInt(5));
 
 				}
 				stm.close();

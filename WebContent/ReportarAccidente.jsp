@@ -15,7 +15,7 @@
      <form method="post" action="CrearRegistroAccidente">
      
      <input type="hidden" name="idUser" value="${sessionScope.Cliente.id}">
-			<input type="hidden" name="idEmpresa" value="76767676">
+			<input type="hidden" name="idEmpresa" value="${sessionScope.Cliente.empresa}"> <!-- id de prueba. Hay que hacerlo variable -->
      
 		<table>
 			<tr>
@@ -56,6 +56,10 @@
 		<input type="submit" name="reporteaccidente" value="Enviar Reporte de Accidente">
 	
 	</form>
+	
+	<button onclick="window.location.href='${pageContext.request.contextPath}/Cliente';">
+	Volver
+    </button>
 	
 	<br/>
 		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>

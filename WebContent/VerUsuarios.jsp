@@ -23,6 +23,7 @@
 			<th>Nombre</th>
 			<th>ID</th>
 			<th>Cargo</th>
+			<th>Empresa</th>
 			<th>Acciones</th>
 		</tr>
 		
@@ -31,6 +32,7 @@
 			<td>${user.getNombre()}</td>
 			<td>${user.getId()}</td>
 			<td>${user.getPerfil()}</td>
+			<td>${user.getEmpresa()}</td>
 			
 			<td><a href="${pageContext.request.contextPath}/ModificarUser?id=${user.getId()}">Editar</a> &nbsp; <a href="${pageContext.request.contextPath}/BorrarUsuario?id=${user.getId()}">Eliminar</a></td>
 			

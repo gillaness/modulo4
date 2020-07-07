@@ -1,6 +1,9 @@
 package controlador;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +13,9 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
+import dao.EmpresaDao;
 import dao.UserDao;
+import modelo.Empresa;
 import modelo.User;
 
 /**
@@ -39,6 +44,13 @@ public class AgregarUser extends HttpServlet {
 		if (suser == null || suser.getId().trim() == "" ) {
 			request.getRequestDispatcher("Login.jsp").forward(request, response);
 		}else {
+			
+			EmpresaDao empresadao = new EmpresaDao();
+			List<Empresa> lempresas = new ArrayList<Empresa>();
+			
+			lempresas = empresadao.mostrarEmpresa();
+			request.setAttribute("listaempresas", lempresas);
+			
 			request.getRequestDispatcher("CrearUsuario.jsp").forward(request, response);
 		}
 		
@@ -55,12 +67,14 @@ public class AgregarUser extends HttpServlet {
 		if (suser == null || suser.getId().trim() == "" ) {
 			request.getRequestDispatcher("Login.jsp").forward(request, response);
 		}else {
+
 			String id = request.getParameter("rut");
 			String nombre = request.getParameter("nombre");
 			String password = DigestUtils.md5Hex(request.getParameter("pass")).toUpperCase();
 			int perfil = Integer.parseInt(request.getParameter("perfil"));
+			int empresa = Integer.parseInt(request.getParameter("empresa"));
 			
-			User usuario = new User(id,nombre,password,perfil);
+			User usuario = new User(id,nombre,password,perfil, empresa);
 			
 			UserDao usuariodao = new UserDao();
 			

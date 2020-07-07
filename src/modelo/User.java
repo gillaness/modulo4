@@ -6,16 +6,18 @@ public class User {
 	private String nombre;
 	private String password;
 	private int perfil;
+	private int empresa;
 	
 	public User() {
 		this.id="";
 	}
 	
-	public User(String id, String nombre, String password, int perfil) {
+	public User(String id, String nombre, String password, int perfil, int empresa) {
 		this.id = id;
 		this.nombre = nombre;
 		this.password = password;
 		this.perfil = perfil;
+		this.empresa = empresa;
 	}
 
 	public String getId() {
@@ -50,10 +52,23 @@ public class User {
 		this.perfil = perfil;
 	}
 
+	public int getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(int empresa) {
+		this.empresa = empresa;
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", nombre=" + nombre + ", password=" + password + ", perfil=" + perfil + "]";
+		return "User [id=" + id + ", nombre=" + nombre + ", password=" + password + ", perfil=" + perfil + ", empresa="
+				+ empresa + "]";
 	}
+
+	
+
+	
 	
 
 }

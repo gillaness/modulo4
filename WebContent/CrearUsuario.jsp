@@ -41,6 +41,17 @@
 				</select>
 				</td>
 			</tr>
+			<tr>
+				<td>Empresa</td>
+				<td>
+				<select name="empresa">
+				<c:forEach items="${listaempresas}" var="empresa">
+					<option value="${empresa.getRutEmpresa()}">${empresa.getNombreEmpresa()}</option>
+				</c:forEach>
+				</select>
+				</td>
+			</tr>
+			
 
 		</table>
 		<br>
