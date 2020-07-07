@@ -10,7 +10,10 @@
 </head>
 <body>
 	<div class="contenedor">
-	<h3>Bienvenido. Favor ingresa tu usuario y clave para ingresar</h3>
+	<h3>APRL Aplicacion Prevención de Riesgos Laborales</h3>
+	<br>
+	<h3>Bienvenido</h3>
+	<h3>Favor ingresa tu usuario y clave de acceso</h3>
 	<c:if test="${lmensaje != null}">
 	<h3><c:out value="${lmensaje}"></c:out></h3>
 </c:if>
