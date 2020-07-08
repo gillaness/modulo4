@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DetalleFactura" directorySegmentName="seg_0" id="D97EC311-B8AE-7EE1-1D75-38C0273B7F32">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 02:05:01 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<sourcePk>02B8D6F8-4CA7-7939-00DE-46886BDB0BF8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>2D5F3715-73FA-1270-2CB0-9AE5D6345B06</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>047BF921-D3E6-F6CB-D39A-D5431DBAD3B6</targetEntity>
+<transferable>true</transferable>
+</Relation>

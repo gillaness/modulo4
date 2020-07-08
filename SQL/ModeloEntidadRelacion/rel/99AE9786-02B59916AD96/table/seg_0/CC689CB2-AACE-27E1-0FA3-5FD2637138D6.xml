@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC689CB2-AACE-27E1-0FA3-5FD2637138D6" name="Detalle">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>2D5F3715-73FA-1270-2CB0-9AE5D6345B06</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<ordsAlias>detallefactura</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idDetalle" id="BFCDBF33-05C6-7F4D-0094-B12F7ADDCF61">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>133B1BDA-B027-8D06-F10D-BCCC2B90BB46</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombreDetalle" id="52016C7C-4A4C-DD6D-0A27-4457DC150FBF">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>95E4A07A-424E-7FFF-A775-70FEA740D26F</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1F112A4-363F-4508-B4C1-952DC2FCB70C" name="detalleFactura_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>02B8D6F8-4CA7-7939-00DE-46886BDB0BF8</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFCDBF33-05C6-7F4D-0094-B12F7ADDCF61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

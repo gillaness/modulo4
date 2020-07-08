@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fkAgendaTipoVisita" directorySegmentName="seg_0" id="2CDD334B-5019-E039-4062-7B8E6252BB12">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:39:49 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<sourcePk>5C320F31-7CBC-1761-314A-CDDD973D8828</sourcePk>
+<targetPk>E835E08E-8F1C-46BA-CA17-D40A7D1F5B0A</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C824163E-F64A-1719-056C-7B6504A40390</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>23574358-DA4F-A76B-A30D-8223B145A3A8</targetEntity>
+<transferable>true</transferable>
+</Relation>

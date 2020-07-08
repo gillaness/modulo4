@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1D56FD59-9515-66D7-8ACC-CBDD8D4DD8CD" name="Usuario">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 00:53:33 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idUsuario" id="4F7EAD06-D541-D357-4191-92C778FD399D">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 00:55:09 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="28012EF6-03F2-0A8C-0675-BAB21AE004C0">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 00:56:08 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="A33E98FC-3AA0-DAF0-5178-CEE01E60B943">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 00:55:38 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 CHAR</dataTypeSize>
+<ownDataTypeParameters>32 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idPerfil" id="527B7B9E-C8B4-AA7A-7609-C61C5BF10C56">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 00:58:13 UTC</createdTime>
+<generatorID>69840B2E-5698-9B64-8687-6401AA653FCE</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>4F54331A-E3EA-DEAE-9A0F-66C22E5763F0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idEmpresa" id="8B19ACD4-E0D0-1128-C2B8-1B7D45FCD062">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:27:06 UTC</createdTime>
+<generatorID>3EB1EF07-E5A4-36E0-C194-C409C5CCFA1E</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>91D8E51C-831F-1A08-0778-E5D230F980A3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2542341D-9872-99EA-5865-7E7EB592125D" name="pkUsuario">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 00:55:33 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4F7EAD06-D541-D357-4191-92C778FD399D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ABABB549-3742-5104-101F-F6DDFCE03B7A" name="TiposAccidentes">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>B18884E1-BE7C-2474-182F-850EE6F07B28</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idTipoAccidente" id="9DA4B91D-6AA3-7248-FE4F-6F180F6BFAC5">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>9F6CB1F2-0D7A-24F8-71F7-E908ED8B2775</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipoAccidente" id="8084758F-D7CB-1D38-8CB3-B6E6DA48F963">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>A5F9A1FC-029C-5A29-12FD-A585A1B0D0EA</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EFB54664-8CBA-729D-90EC-7837BB0E4042" name="pkTiposAccidentes">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>6CB36F2C-A279-2D81-8C2C-A4600AF74B3C</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DA4B91D-6AA3-7248-FE4F-6F180F6BFAC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FE1AC38C-195B-FD59-70D9-91229ED84FEA" name="Empresa">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 00:58:41 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idEmpresa" id="91D8E51C-831F-1A08-0778-E5D230F980A3">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 00:59:19 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombreEmpresa" id="045D832C-F1D5-CE0A-4DCE-78C8A15439DD">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 00:59:36 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="105A43BF-F5FE-3908-3554-D4CC7BDABC7B">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:21:13 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contacto" id="1C111DAF-F6FA-ED0C-B318-1B2A1850F26B">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:22:08 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="8BF8497E-21A1-CA96-8E44-BCC8AE696FC3">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:22:55 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 CHAR</dataTypeSize>
+<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mailcontacto" id="E0FE2DB6-482A-7EA8-A94D-BBDDF0D4276A">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:23:17 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1B38F2B6-C73D-4A87-5646-B4C3D6C7C35A" name="pkEmpresa">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:00:53 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>91D8E51C-831F-1A08-0778-E5D230F980A3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

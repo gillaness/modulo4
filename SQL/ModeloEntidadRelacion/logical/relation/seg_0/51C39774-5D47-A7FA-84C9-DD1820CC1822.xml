@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fkRegAcciUser" directorySegmentName="seg_0" id="51C39774-5D47-A7FA-84C9-DD1820CC1822">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:02:31 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<sourcePk>2542341D-9872-99EA-5865-7E7EB592125D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1D56FD59-9515-66D7-8ACC-CBDD8D4DD8CD</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0AEB0BB4-E33F-BAA9-7EB5-031A7958EFA7</targetEntity>
+<transferable>true</transferable>
+</Relation>

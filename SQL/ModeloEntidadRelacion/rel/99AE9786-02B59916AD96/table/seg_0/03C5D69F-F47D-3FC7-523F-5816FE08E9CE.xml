@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03C5D69F-F47D-3FC7-523F-5816FE08E9CE" name="Usuario">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>1D56FD59-9515-66D7-8ACC-CBDD8D4DD8CD</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idUsuario" id="5978F921-AEA0-C306-65F2-718D5C8E83EF">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>4F7EAD06-D541-D357-4191-92C778FD399D</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 CHAR</dataTypeSize>
+<ownDataTypeParameters>32 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="09FB565A-B0B2-1BE5-E742-8AF6C918292E">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>28012EF6-03F2-0A8C-0675-BAB21AE004C0</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="92AA0ED3-98E2-165E-AD2C-D53F530ABDA4">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>A33E98FC-3AA0-DAF0-5178-CEE01E60B943</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idPerfil" id="DF476D04-BDC9-55D2-1FC4-4F30DE3399B5">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>527B7B9E-C8B4-AA7A-7609-C61C5BF10C56</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="493F4CFD-3732-AE1A-C72D-E9F773531D58" referredColumn="5E8CB8B8-C909-DD36-D9F2-CD498287110F"/>
+</associations>
+</Column>
+<Column name="idEmpresa" id="58D72C38-5AD6-3F4E-AA19-55F1FB98BF19">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>8B19ACD4-E0D0-1128-C2B8-1B7D45FCD062</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7551FCAD-0825-294A-E021-D392A9D4B3CB" referredColumn="16A5ADE9-5284-D809-19C4-FBFF8C98CE06"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B3B066D-0719-2FF1-5EAC-0EC4FFA69110" name="Usuario_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>2542341D-9872-99EA-5865-7E7EB592125D</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5978F921-AEA0-C306-65F2-718D5C8E83EF"/>
+<colUsage columnID="58D72C38-5AD6-3F4E-AA19-55F1FB98BF19"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4811A1F4-8730-FB24-1BAF-540FB08DB738" name="fkUsuarioPerfil">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>69840B2E-5698-9B64-8687-6401AA653FCE</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF476D04-BDC9-55D2-1FC4-4F30DE3399B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4EDF2D3-9479-82A1-7E90-EC64D6838587" name="fkUsuarioEmpresa">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>3EB1EF07-E5A4-36E0-C194-C409C5CCFA1E</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58D72C38-5AD6-3F4E-AA19-55F1FB98BF19"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

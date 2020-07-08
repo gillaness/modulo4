@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C824163E-F64A-1719-056C-7B6504A40390" name="Agenda">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 00:58:30 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idVisita" id="1C7C8BE1-0A89-E512-7EEA-AD7283E593D9">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:26:26 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idEmpresa" id="D4152FF0-7839-5195-EA46-3D7601699623">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:15:13 UTC</createdTime>
+<generatorID>C117A8A0-52BF-898F-00F1-E9D8036302C3</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>91D8E51C-831F-1A08-0778-E5D230F980A3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaVisita" id="49AEFBA8-E8CE-2F00-DE1C-21E069D679E8">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:26:41 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaVisita" id="88D82FBE-7FEE-AEB6-BA97-95A87BB395A4">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:39:18 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idTipoVisita" id="00FBA0A8-9C94-8662-5E01-789EF6BA63FA">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:40:37 UTC</createdTime>
+<generatorID>2CDD334B-5019-E039-4062-7B8E6252BB12</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>510DACDC-3F39-B694-875F-CF18F583C64C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idUsuario" id="2E99D155-2DE8-44C4-41CE-85F053DFE898">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-05 01:37:17 UTC</createdTime>
+<generatorID>509B02EF-15C0-32BE-0D46-64E0733F452A</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>4F7EAD06-D541-D357-4191-92C778FD399D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5C320F31-7CBC-1761-314A-CDDD973D8828" name="pkAgenda">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:15:13 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D4152FF0-7839-5195-EA46-3D7601699623</attributeRef>
+<attributeRef>1C7C8BE1-0A89-E512-7EEA-AD7283E593D9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8E14BB42-C1E5-4A0A-FD9E-FAA289E84BE9" name="DetalleFactura">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<ordsAlias>relation_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idDetalle" id="CCA05D6C-2690-2CC8-B6DB-A7F67FFA2C02">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="050B893D-FBA8-EF76-7A09-98B1AADE59F6" referredColumn="BFCDBF33-05C6-7F4D-0094-B12F7ADDCF61"/>
+</associations>
+</Column>
+<Column name="folio" id="A99C5117-11CC-982C-7D56-16AA11B82832">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB9EC80D-B79D-6F22-3489-D6ED86111751" referredColumn="5F8D6EDA-D051-CDE2-6C02-D8EE923A0E63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="64BF302D-5B36-EDC9-52DC-BF0A8EFE46A0" name="Relation_28_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CCA05D6C-2690-2CC8-B6DB-A7F67FFA2C02"/>
+<colUsage columnID="A99C5117-11CC-982C-7D56-16AA11B82832"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="81037AAD-0D23-4B39-5380-644D3A09BF14" name="fkDetFacDet">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>D97EC311-B8AE-7EE1-1D75-38C0273B7F32</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CCA05D6C-2690-2CC8-B6DB-A7F67FFA2C02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EB47F3C-25A5-D4B1-8841-3E902D972EA8" name="fkDetFacFac">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:29:56 UTC</createdTime>
+<generatorID>D97EC311-B8AE-7EE1-1D75-38C0273B7F32</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A99C5117-11CC-982C-7D56-16AA11B82832"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

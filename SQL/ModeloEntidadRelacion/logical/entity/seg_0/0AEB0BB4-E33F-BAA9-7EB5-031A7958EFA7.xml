@@ -1,0 +1,168 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0AEB0BB4-E33F-BAA9-7EB5-031A7958EFA7" name="RegistroAccidente">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 01:20:47 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CAD68983-5ED5-1F4B-93D5-2545E1333E7F">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 01:20:57 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcionAccidente" id="DCB89682-04EF-BCE0-6717-66EF5739BF70">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 01:21:21 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaAccidente" id="4998D3FA-A2E2-9182-C5BB-F9EF5536FB04">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 01:21:52 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaAccidente" id="6EF0E9E7-AE63-80EF-1B16-0E70C07C7CCF">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 01:22:08 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="areaAccidente" id="F3F53EED-E987-B5C5-81D1-1FBF26C3FB42">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 01:22:30 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idEmpresa" id="73B2A94B-7C0C-87D8-2CB6-B434E90807A3">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-03 01:05:18 UTC</createdTime>
+<generatorID>56ED1678-F027-E8EA-801A-3DFD38A8094F</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>91D8E51C-831F-1A08-0778-E5D230F980A3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idUsuario" id="C883F4C1-B88B-7F6F-81AD-BC501A7ACFA2">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-05 01:37:17 UTC</createdTime>
+<generatorID>51C39774-5D47-A7FA-84C9-DD1820CC1822</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>4F7EAD06-D541-D357-4191-92C778FD399D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombreaccidentado" id="01467626-7B67-EFB1-482B-F06B212367AE">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:24:26 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idEmpresa2" id="C34D5518-E3CD-B8F0-C212-11F24882FD91">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-07 21:46:02 UTC</createdTime>
+<generatorID>3EEF2F46-A371-A84A-7536-D2A96CE5D5DE</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<referedAttribute>91D8E51C-831F-1A08-0778-E5D230F980A3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idTipoAccidente" id="3A134C5E-7E73-9954-E95E-84A1FFEE379E">
+<createdBy>Usuario</createdBy>
+<createdTime>2020-07-08 00:46:04 UTC</createdTime>
+<generatorID>0FEE54D3-D35B-6060-E5CA-9DE9782BC6D7</generatorID>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9F6CB1F2-0D7A-24F8-71F7-E908ED8B2775</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3E3B1F53-0E53-7E7D-65EB-45124D13501A" name="pkRegistroAccidente">
+<createdBy>gilla</createdBy>
+<createdTime>2020-07-02 01:21:20 UTC</createdTime>
+<ownerDesignName>ModeloEntidadRelacion</ownerDesignName>
+<engineerTo>
+<item key="99AE9786-022E-3C8C-2B6C-02B59916AD96" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CAD68983-5ED5-1F4B-93D5-2545E1333E7F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
