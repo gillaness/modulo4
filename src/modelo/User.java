@@ -7,6 +7,8 @@ public class User {
 	private String password;
 	private int perfil;
 	private int empresa;
+	private String nombreEmpresa;
+	private String perfilNombre;
 	
 	public User() {
 		this.id="";
@@ -18,6 +20,14 @@ public class User {
 		this.password = password;
 		this.perfil = perfil;
 		this.empresa = empresa;
+	}
+	
+	public User(String id, String nombre, int empresa, String nombreEmpresa, String perfilNombre) {
+		this.id = id;
+		this.nombre = nombre;
+		this.empresa = empresa;
+		this.nombreEmpresa = nombreEmpresa;
+		this.perfilNombre = perfilNombre;
 	}
 
 	public String getId() {
@@ -58,6 +68,22 @@ public class User {
 
 	public void setEmpresa(int empresa) {
 		this.empresa = empresa;
+	}
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
+
+	public String getPerfilNombre() {
+		return perfilNombre;
+	}
+
+	public void setPerfilNombre(String perfilNombre) {
+		this.perfilNombre = perfilNombre;
 	}
 
 	@Override

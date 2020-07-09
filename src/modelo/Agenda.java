@@ -1,20 +1,18 @@
 package modelo;
 
-import java.sql.Date;
-
 public class Agenda {
 
 	private int idVisita;
 	private String idUsuario;
 	private int rutEmpresa;
-	private Date fechaVisita;
-	private Date horaVisita;
+	private String fechaVisita;
+	private String horaVisita;
 	private int tipoVisita;
 	
 	public Agenda() {
 	}
 
-	public Agenda(int idVisita, String idUsuario, int rutEmpresa, Date fechaVisita, Date horaVisita, int tipoVisita) {
+	public Agenda(int idVisita, String idUsuario, int rutEmpresa, String fechaVisita, String horaVisita, int tipoVisita) {
 		this.idVisita = idVisita;
 		this.idUsuario = idUsuario;
 		this.rutEmpresa = rutEmpresa;
@@ -47,19 +45,19 @@ public class Agenda {
 		this.rutEmpresa = rutEmpresa;
 	}
 
-	public Date getFechaVisita() {
+	public String getFechaVisita() {
 		return fechaVisita;
 	}
 
-	public void setFechaVisita(Date fechaVisita) {
+	public void setFechaVisita(String fechaVisita) {
 		this.fechaVisita = fechaVisita;
 	}
 
-	public Date getHoraVisita() {
+	public String getHoraVisita() {
 		return horaVisita;
 	}
 
-	public void setHoraVisita(Date horaVisita) {
+	public void setHoraVisita(String horaVisita) {
 		this.horaVisita = horaVisita;
 	}
 
@@ -79,5 +77,4 @@ public class Agenda {
 	
 	
 }
-
 

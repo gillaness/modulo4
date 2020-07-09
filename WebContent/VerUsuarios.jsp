@@ -7,7 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>APRL</title>
-<link rel="stylesheet" type="text/css" href="css/estilos.css">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
@@ -20,10 +19,11 @@
 	
 	<table>
 		<tr>
-			<th>Nombre</th>
-			<th>ID</th>
-			<th>Cargo</th>
+			<th>Nombre Usuario</th>
+			<th>UserID</th>
+			<th>Rut Empresa</th>
 			<th>Empresa</th>
+			<th>Perfil</th>
 			<th>Acciones</th>
 		</tr>
 		
@@ -31,8 +31,10 @@
 		<tr>
 			<td>${user.getNombre()}</td>
 			<td>${user.getId()}</td>
-			<td>${user.getPerfil()}</td>
 			<td>${user.getEmpresa()}</td>
+			<td>${user.getNombreEmpresa()}</td>
+			<td>${user.getPerfilNombre()}</td>
+			
 			
 			<td><a href="${pageContext.request.contextPath}/ModificarUser?id=${user.getId()}">Editar</a> &nbsp; <a href="${pageContext.request.contextPath}/BorrarUsuario?id=${user.getId()}">Eliminar</a></td>
 			

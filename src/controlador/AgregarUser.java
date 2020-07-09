@@ -67,6 +67,12 @@ public class AgregarUser extends HttpServlet {
 		if (suser == null || suser.getId().trim() == "" ) {
 			request.getRequestDispatcher("Login.jsp").forward(request, response);
 		}else {
+			
+			EmpresaDao empresadao = new EmpresaDao();
+			List<Empresa> lempresas = new ArrayList<Empresa>();
+			
+			lempresas = empresadao.mostrarEmpresa();
+			request.setAttribute("listaempresas", lempresas);
 
 			String id = request.getParameter("rut");
 			String nombre = request.getParameter("nombre");

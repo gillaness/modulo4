@@ -78,7 +78,7 @@ public class UserDao implements IUserDao {
 		Statement stm = null;
 		ResultSet rs = null;
 		
-		String sql = "select * from usuario ORDER BY nombre";
+		String sql = "select idusuario, nombre, idempresa, nombreempresa, nombreperfil from usuario inner join empresa using(idempresa) inner join perfil using (idperfil) ORDER BY nombre";
 		
 		List<User> listaUsuarios = new ArrayList<User>();
 		
@@ -92,9 +92,9 @@ public class UserDao implements IUserDao {
 				User c = new User();
 				c.setId(rs.getString(1));
 				c.setNombre(rs.getString(2));
-				c.setPassword(rs.getString(3));
-				c.setPerfil(rs.getInt(4));
-				c.setEmpresa(rs.getInt(5));
+				c.setEmpresa(rs.getInt(3));
+				c.setNombreEmpresa(rs.getString(4));
+				c.setPerfilNombre(rs.getString(5));
 
 				listaUsuarios.add(c);
 			}
