@@ -74,7 +74,7 @@ public class ModificarUser extends HttpServlet {
 			
 			UserDao userdao = new UserDao();
 			
-			boolean editar = userdao.editarUser(user);
+			boolean editar = userdao.editar(user);
 			
 			String mensaje ="";
 			

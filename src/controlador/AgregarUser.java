@@ -48,7 +48,7 @@ public class AgregarUser extends HttpServlet {
 			EmpresaDao empresadao = new EmpresaDao();
 			List<Empresa> lempresas = new ArrayList<Empresa>();
 			
-			lempresas = empresadao.mostrarEmpresa();
+			lempresas = empresadao.mostrar();
 			request.setAttribute("listaempresas", lempresas);
 			
 			request.getRequestDispatcher("CrearUsuario.jsp").forward(request, response);
@@ -71,7 +71,7 @@ public class AgregarUser extends HttpServlet {
 			EmpresaDao empresadao = new EmpresaDao();
 			List<Empresa> lempresas = new ArrayList<Empresa>();
 			
-			lempresas = empresadao.mostrarEmpresa();
+			lempresas = empresadao.mostrar();
 			request.setAttribute("listaempresas", lempresas);
 
 			String id = request.getParameter("rut");
@@ -84,7 +84,7 @@ public class AgregarUser extends HttpServlet {
 			
 			UserDao usuariodao = new UserDao();
 			
-			boolean agregar = usuariodao.crearUser(usuario);
+			boolean agregar = usuariodao.crear(usuario);
 			
 			String mensaje = "";
 			

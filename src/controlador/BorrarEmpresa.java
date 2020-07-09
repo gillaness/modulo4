@@ -46,10 +46,10 @@ public class BorrarEmpresa extends HttpServlet {
 			empresa.setRutEmpresa(rutEmpresa);
 			
 			EmpresaDao empresadao = new EmpresaDao();
-			boolean eliminar = empresadao.eliminarEmpresa(empresa);
+			boolean eliminar = empresadao.eliminar(empresa);
 
 			List<Empresa> listadoeliminar = new ArrayList<Empresa>();
-			listadoeliminar = empresadao.mostrarEmpresa();
+			listadoeliminar = empresadao.mostrar();
 			
 			String mensaje = "";
 			

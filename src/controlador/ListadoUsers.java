@@ -44,7 +44,7 @@ public class ListadoUsers extends HttpServlet {
 			UserDao userdao = new UserDao();
 			List<User> lusuarios = new ArrayList<User>();
 			
-			lusuarios = userdao.mostrarUser();
+			lusuarios = userdao.mostrar();
 			
 			request.setAttribute("listausers", lusuarios);
 			request.getRequestDispatcher("VerUsuarios.jsp").forward(request, response);

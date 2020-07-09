@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import conexion.ConexionSingleton;
-import idao.IUserDao;
+import idao.IDao;
 import modelo.User;
 
 
 
-public class UserDao implements IUserDao {
+public class UserDao implements IDao<User> {
 
 	@Override
-	public boolean crearUser(User usuario) {
+	public boolean crear(User usuario) {
 		// TODO Auto-generated method stub
 		boolean registrar = false;
 		
@@ -39,7 +39,6 @@ public class UserDao implements IUserDao {
 		return registrar;
 	}
 
-	@Override
 	public User obtenerUsuarioByLogin(String loginusuario) {
 		Connection con = null;
 		Statement stm = null;
@@ -72,7 +71,7 @@ public class UserDao implements IUserDao {
 	}
 
 	@Override
-	public List<User> mostrarUser() {
+	public List<User> mostrar() {
 
 		Connection con = null;
 		Statement stm = null;
@@ -113,7 +112,7 @@ public class UserDao implements IUserDao {
 	}
 
 	@Override
-	public boolean editarUser(User user) {
+	public boolean editar(User user) {
 		// TODO Auto-generated method stub
 		
 		Connection con = null;
@@ -171,7 +170,7 @@ public class UserDao implements IUserDao {
 		}
 
 	@Override
-	public boolean eliminarUsuario(User user) {
+	public boolean eliminar(User user) {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement stm = null;

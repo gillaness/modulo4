@@ -45,7 +45,7 @@ public class ListaEmpresas extends HttpServlet {
 			EmpresaDao empresadao = new EmpresaDao();
 			List<Empresa> lempresas = new ArrayList<Empresa>();
 			
-			lempresas = empresadao.mostrarEmpresa();
+			lempresas = empresadao.mostrar();
 			
 			request.setAttribute("listaempresas", lempresas);
 			request.getRequestDispatcher("VerEmpresas.jsp").forward(request, response);

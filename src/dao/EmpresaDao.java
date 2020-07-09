@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import conexion.ConexionSingleton;
-import idao.IEmpresaDao;
+import idao.IDao;
 import modelo.Empresa;
 
-public class EmpresaDao implements IEmpresaDao {
+public class EmpresaDao implements IDao<Empresa> {
 
 	@Override
-	public boolean crearEmpresa(Empresa empresa) {
+	public boolean crear(Empresa empresa) {
 		// TODO Auto-generated method stub
 		boolean crear = false;
 		
@@ -39,7 +39,7 @@ public class EmpresaDao implements IEmpresaDao {
 	}
 
 	@Override
-	public List<Empresa> mostrarEmpresa() {
+	public List<Empresa> mostrar() {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement stm = null;
@@ -81,7 +81,7 @@ public class EmpresaDao implements IEmpresaDao {
 	}
 
 	@Override
-	public boolean editarEmpresa(Empresa empresa) {
+	public boolean editar(Empresa empresa) {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement stm = null;
@@ -105,7 +105,7 @@ public class EmpresaDao implements IEmpresaDao {
 	}
 
 	@Override
-	public Empresa obtenerRut(String rutEmpresa) {
+	public Empresa obtenerId(String rutEmpresa) {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement stm = null;
@@ -138,7 +138,7 @@ public class EmpresaDao implements IEmpresaDao {
 	}
 
 	@Override
-	public boolean eliminarEmpresa(Empresa empresa) {
+	public boolean eliminar(Empresa empresa) {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement stm = null;

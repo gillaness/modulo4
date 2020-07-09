@@ -65,7 +65,7 @@ public class CrearEmpresa extends HttpServlet {
 			
 			EmpresaDao empresadao = new EmpresaDao();
 			
-			boolean crear = empresadao.crearEmpresa(empresa);
+			boolean crear = empresadao.crear(empresa);
 			
 			String mensaje = "";
 			
