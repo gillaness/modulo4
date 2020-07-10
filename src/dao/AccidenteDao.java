@@ -49,7 +49,7 @@ public class AccidenteDao implements IDao<Accidente> {
 	}
 
 	@Override
-	public Accidente obtenerId(String rut) {
+	public Accidente obtenerPorId(String rut) {
 		// TODO Auto-generated method stub
 		return null;
 	}

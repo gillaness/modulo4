@@ -47,7 +47,7 @@ public class CambiarPassword extends HttpServlet {
 			
 			UserDao userdao = new UserDao();
 			User user = new User();
-			user = userdao.obtenerId(userId);
+			user = userdao.obtenerPorId(userId);
 			
 			request.setAttribute("datos", user);
 			request.getRequestDispatcher("CambiarPassword.jsp").forward(request, response);

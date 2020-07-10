@@ -9,6 +9,7 @@ public class Agenda {
 	private String horaVisita;
 	private int tipoVisita;
 	private String estatus; 
+	private String nombreVisita;
 	
 	public Agenda() {
 	}
@@ -22,6 +23,18 @@ public class Agenda {
 		this.tipoVisita = tipoVisita;
 		this.estatus = estatus;
 	}
+	
+	public Agenda(String idUsuario, int rutEmpresa, String fechaVisita, String horaVisita, String nombreVisita, String estatus) {
+		
+		this.idUsuario = idUsuario;
+		this.rutEmpresa = rutEmpresa;
+		this.fechaVisita = fechaVisita;
+		this.horaVisita = horaVisita;
+		this.nombreVisita = nombreVisita;
+		this.estatus = estatus;
+	}
+	
+	
 
 	public int getIdVisita() {
 		return idVisita;
@@ -78,16 +91,21 @@ public class Agenda {
 	public void setEstatus(String estatus) {
 		this.estatus = estatus;
 	}
+	
+	public String getNombreVisita() {
+		return nombreVisita;
+	}
+
+	public void setNombreVisita(String nombreVisita) {
+		this.nombreVisita = nombreVisita;
+	}
 
 	@Override
 	public String toString() {
 		return "Agenda [idVisita=" + idVisita + ", idUsuario=" + idUsuario + ", rutEmpresa=" + rutEmpresa
 				+ ", fechaVisita=" + fechaVisita + ", horaVisita=" + horaVisita + ", tipoVisita=" + tipoVisita
-				+ ", estatus=" + estatus + "]";
+				+ ", estatus=" + estatus + ", nombreVisita=" + nombreVisita + "]";
 	}
 
-	
-	
-	
 }
 

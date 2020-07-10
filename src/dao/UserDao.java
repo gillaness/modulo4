@@ -138,7 +138,7 @@ public class UserDao implements IDao<User> {
 	}
 
 	@Override
-	public User obtenerId(String idusuario) {
+	public User obtenerPorId(String idusuario) {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement stm = null;

@@ -43,7 +43,7 @@ public class ModificarEmpresa extends HttpServlet {
 			
 			EmpresaDao empresadao = new EmpresaDao();
 			Empresa empresa = new Empresa();
-			empresa = empresadao.obtenerId(rutEmpresa);
+			empresa = empresadao.obtenerPorId(rutEmpresa);
 			
 			request.setAttribute("datos", empresa);
 			request.getRequestDispatcher("EditarEmpresa.jsp").forward(request, response);

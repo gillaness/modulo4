@@ -14,6 +14,7 @@
 	<div class="menu">
 	<h3>Menu Profesional</h3>
 		<a href="CrearAgenda">Crear Agenda</a>
+		<a href="MiAgenda">Ver Agenda</a>
 		<a href="#">Crear Capacitacion</a>
 		<a href="#">Crear Asesoria</a>
 		<br>

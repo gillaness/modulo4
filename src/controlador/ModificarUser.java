@@ -51,14 +51,18 @@ public class ModificarUser extends HttpServlet {
 			
 			lempresas = empresadao.mostrar();
 			
+			
+			
 			String userId = request.getParameter("id");
 			
 			UserDao userdao = new UserDao();
 			User user = new User();
-			user = userdao.obtenerId(userId);
+			user = userdao.obtenerPorId(userId);
+
 			
 			request.setAttribute("datos", user);
 			request.setAttribute("listaempresas", lempresas);
+
 			request.getRequestDispatcher("EditarUsuario.jsp").forward(request, response);
 		}
 		

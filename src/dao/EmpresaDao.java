@@ -105,7 +105,7 @@ public class EmpresaDao implements IDao<Empresa> {
 	}
 
 	@Override
-	public Empresa obtenerId(String rutEmpresa) {
+	public Empresa obtenerPorId(String rutEmpresa) {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement stm = null;
