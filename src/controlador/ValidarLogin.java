@@ -102,14 +102,14 @@ public class ValidarLogin extends HttpServlet {
 			sesiones.setAttribute("Profesional", user); // seteo de atributos de la sesion
 			request.setAttribute("User", user);
 			
-			request.getRequestDispatcher("VistaProfesional.jsp").forward(request, response);
+			response.sendRedirect(request.getContextPath() + "/Profesional");
 		
 		}else if (user.getPerfil() == 3) {
 			HttpSession sesiones = request.getSession(); //sesion de cliente
 			sesiones.setAttribute("Cliente", user); // seteo de atributos de la sesion
 			request.setAttribute("User", user);
 			
-			request.getRequestDispatcher("VistaCliente.jsp").forward(request, response);
+			response.sendRedirect(request.getContextPath() + "/Cliente");
 		}
 	}
 

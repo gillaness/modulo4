@@ -3,14 +3,17 @@ package dao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import conexion.ConexionSingleton;
+import idao.IDao;
 import modelo.Accidente;
 
 
-public class AccidenteDao {
+public class AccidenteDao implements IDao<Accidente> {
 	
-	public boolean crearRegistro(Accidente accidente) {
+	@Override
+	public boolean crear(Accidente accidente) {
 		// TODO Auto-generated method stub
 		boolean registrar = false;
 		
@@ -26,11 +29,35 @@ public class AccidenteDao {
 			registrar = true;
 			stm.close();
 		}catch(SQLException e) {
-			System.out.println("Error: Clase AccidenteDao, método crearRegistro");
+			System.out.println("Error: Clase AccidenteDao, método crear");
 			e.printStackTrace();
 		}
 		
 		return registrar;
+	}
+
+	@Override
+	public List<Accidente> mostrar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean editar(Accidente objeto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Accidente obtenerId(String rut) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean eliminar(Accidente objeto) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

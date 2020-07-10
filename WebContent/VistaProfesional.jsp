@@ -13,11 +13,11 @@
 
 	<div class="menu">
 	<h3>Menu Profesional</h3>
-		<a href="creaagenda.jsp">Crear Agenda</a>
-		<a href="creacapacitacion.jsp">Crear Capacitacion</a>
-		<a href="creaasesoria.jsp">Crear Asesoria</a>
+		<a href="CrearAgenda">Crear Agenda</a>
+		<a href="#">Crear Capacitacion</a>
+		<a href="#">Crear Asesoria</a>
 		<br>
-		<input type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
+		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>
 
 </div>
 	

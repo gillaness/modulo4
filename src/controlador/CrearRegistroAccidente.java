@@ -68,7 +68,7 @@ public class CrearRegistroAccidente extends HttpServlet {
 			
 			AccidenteDao accidentedao = new AccidenteDao();
 			
-			boolean crear = accidentedao.crearRegistro(accidente);
+			boolean crear = accidentedao.crear(accidente);
 			
 			String mensaje = "";
 			

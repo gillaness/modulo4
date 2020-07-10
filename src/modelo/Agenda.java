@@ -8,17 +8,19 @@ public class Agenda {
 	private String fechaVisita;
 	private String horaVisita;
 	private int tipoVisita;
+	private String estatus; 
 	
 	public Agenda() {
 	}
 
-	public Agenda(int idVisita, String idUsuario, int rutEmpresa, String fechaVisita, String horaVisita, int tipoVisita) {
-		this.idVisita = idVisita;
+	public Agenda(String idUsuario, int rutEmpresa, String fechaVisita, String horaVisita, int tipoVisita, String estatus) {
+		
 		this.idUsuario = idUsuario;
 		this.rutEmpresa = rutEmpresa;
 		this.fechaVisita = fechaVisita;
 		this.horaVisita = horaVisita;
 		this.tipoVisita = tipoVisita;
+		this.estatus = estatus;
 	}
 
 	public int getIdVisita() {
@@ -69,11 +71,22 @@ public class Agenda {
 		this.tipoVisita = tipoVisita;
 	}
 
+	public String getEstatus() {
+		return estatus;
+	}
+
+	public void setEstatus(String estatus) {
+		this.estatus = estatus;
+	}
+
 	@Override
 	public String toString() {
 		return "Agenda [idVisita=" + idVisita + ", idUsuario=" + idUsuario + ", rutEmpresa=" + rutEmpresa
-				+ ", fechaVisita=" + fechaVisita + ", horaVisita=" + horaVisita + ", tipoVisita=" + tipoVisita + "]";
+				+ ", fechaVisita=" + fechaVisita + ", horaVisita=" + horaVisita + ", tipoVisita=" + tipoVisita
+				+ ", estatus=" + estatus + "]";
 	}
+
+	
 	
 	
 }
