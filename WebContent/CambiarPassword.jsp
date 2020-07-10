@@ -5,47 +5,43 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>APRL || Editar Usuarios</title>
+<title>APRL || Cambiar Password</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
 	<div class="contenedor">
-	<h3>Editar Usuarios</h3>
+	<h3>Modificar Password</h3>
 	
 	<c:if test="${mensaje != null}">
 	<c:out value="${mensaje}" />
 	</c:if>
 	
-	<form action="ModificarUser" method="post">
+	<form action="CambiarPassword" method="post">
 	<table>
 		<tr>
 		<td><input type="hidden" name="userId" value="${datos.getId()}"></td>
 		</tr>
 		<tr>
-		<td>Nombre</td>
-		<td><input type="text" name="nombre" value="${datos.getNombre()}"></td>
+		<td><input type="hidden" name="nombre" value="${datos.getNombre()}"></td>
 		</tr>
 		<tr>
-		<td>Empresa</td>
-		<td>
-		<select name="empresa">
-		<c:forEach items="${listaempresas}" var="empresa">
-			<option value="${empresa.getRutEmpresa()}">${empresa.getNombreEmpresa()}</option>
-		</c:forEach>
-		</select>
-		</td>
+		<td><input type="hidden" name="perfil" value="${datos.getPerfil()}"></td>
 		</tr>
 		<tr>
-		<td>Perfil</td>
-		<td><select name="perfil">
-				<option value="1">Administrador</option>
-				<option value="2">Profesional</option>
-				<option value="3">Cliente</option>
-		</select></td>
+		<td><input type="hidden" name="empresa" value="${datos.getEmpresa()}"></td>
 		</tr>
+		<tr>
+		<td>Nuevo Password</td>
+		<td><input type="password" name="password"></td>
+		</tr>
+		<tr>
+		<td>Confirmar Password</td>
+		<td><input type="password" name="password1"></td>
+		</tr>
+		
 	</table>
 		<br>
-		<input type="submit" value="Modificar">
+		<input type="submit" value="Cambiar Password">
 	</form>
 	
 	<button onclick="window.location.href='${pageContext.request.contextPath}/ListadoUsers';">

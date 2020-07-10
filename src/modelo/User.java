@@ -22,6 +22,8 @@ public class User {
 		this.empresa = empresa;
 	}
 	
+	/*Este constructor sirve para realizar JOIN con las tablas Empresa y Perfil en las Base de Datos*/
+	
 	public User(String id, String nombre, int empresa, String nombreEmpresa, String perfilNombre) {
 		this.id = id;
 		this.nombre = nombre;
@@ -29,6 +31,16 @@ public class User {
 		this.nombreEmpresa = nombreEmpresa;
 		this.perfilNombre = perfilNombre;
 	}
+	
+	/*Este constructor sirve para modificar datos del usuario, excepto el Password*/
+	
+	public User(String id, String nombre, int perfil, int empresa) {
+		this.id = id;
+		this.nombre = nombre;
+		this.perfil = perfil;
+		this.empresa = empresa;
+	}
+	
 
 	public String getId() {
 		return id;

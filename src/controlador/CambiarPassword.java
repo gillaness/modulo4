@@ -1,8 +1,7 @@
 package controlador;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,24 +10,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-//import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.codec.digest.DigestUtils;
 
-import dao.EmpresaDao;
 import dao.UserDao;
-import modelo.Empresa;
 import modelo.User;
 
 /**
- * Servlet implementation class ModificarUser
+ * Servlet implementation class CambiarPassword
  */
-@WebServlet("/ModificarUser")
-public class ModificarUser extends HttpServlet {
+@WebServlet("/CambiarPassword")
+public class CambiarPassword extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ModificarUser() {
+    public CambiarPassword() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -46,11 +43,6 @@ public class ModificarUser extends HttpServlet {
 		}
 		else {
 			
-			EmpresaDao empresadao = new EmpresaDao();
-			List<Empresa> lempresas = new ArrayList<Empresa>();
-			
-			lempresas = empresadao.mostrar();
-			
 			String userId = request.getParameter("id");
 			
 			UserDao userdao = new UserDao();
@@ -58,8 +50,7 @@ public class ModificarUser extends HttpServlet {
 			user = userdao.obtenerId(userId);
 			
 			request.setAttribute("datos", user);
-			request.setAttribute("listaempresas", lempresas);
-			request.getRequestDispatcher("EditarUsuario.jsp").forward(request, response);
+			request.getRequestDispatcher("CambiarPassword.jsp").forward(request, response);
 		}
 		
 	}
@@ -77,35 +68,45 @@ public class ModificarUser extends HttpServlet {
 		}
 		else {
 			
-			EmpresaDao empresadao = new EmpresaDao();
-			List<Empresa> lempresas = new ArrayList<Empresa>();
-			
-			lempresas = empresadao.mostrar();
-			
-			
 			String id = request.getParameter("userId");
 			String nombre = request.getParameter("nombre");
-		//	String password = request.getParameter("password").toUpperCase();
 			int perfil = Integer.parseInt(request.getParameter("perfil"));
 			int empresa = Integer.parseInt(request.getParameter("empresa"));
+			String password = DigestUtils.md5Hex(request.getParameter("password")).toUpperCase();
 			
-			User user = new User(id, nombre, perfil, empresa);
+			
+			User user = new User(id, nombre, password, perfil, empresa);
 			
 			UserDao userdao = new UserDao();
-			
-			boolean editar = userdao.editar(user);
-			
+	
 			String mensaje ="";
 			
-			if(editar)
-				mensaje = "Se han actualizado los datos del usuario";
-			else
-				mensaje = "No se actualizaron los datos del usuario";
+			if(request.getParameter("password").equals(request.getParameter("password1")) && (request.getParameter("password") != "" || request.getParameter("password1") != "")) {
+
+				
+				boolean editar = userdao.cambiarPassword(user);
+				
+				if(editar)
+					mensaje = "Se han actualizado los datos del usuario";
+				else
+					mensaje = "No se actualizaron los datos del usuario";
+				
+
+				request.setAttribute("mensaje", mensaje);
+				request.setAttribute("datos", user);
+				request.getRequestDispatcher("CambiarPassword.jsp").forward(request, response);
+			}
 			
-			request.setAttribute("listaempresas", lempresas);
-			request.setAttribute("mensaje", mensaje);
-			request.setAttribute("datos", user);
-			request.getRequestDispatcher("EditarUsuario.jsp").forward(request, response);
+			else {
+				
+				mensaje = "Los passwords no son iguales";
+					
+				request.setAttribute("mensaje", mensaje);
+				request.setAttribute("datos", user);
+				request.getRequestDispatcher("CambiarPassword.jsp").forward(request, response);
+			}
+			
+			
 		}
 		
 	}

@@ -2,8 +2,6 @@ package idao;
 
 import java.util.List;
 
-
-
 public interface IDao<Objeto> {
 
 	public boolean crear(Objeto objeto);

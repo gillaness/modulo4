@@ -120,7 +120,7 @@ public class UserDao implements IDao<User> {
 		
 		boolean editar = false;
 		
-		String sql = "UPDATE usuario SET nombre = '" + user.getNombre() + "', password = '" + user.getPassword() + "', idperfil = '" + user.getPerfil() + "', '"+user.getEmpresa()+"' WHERE idusuario = '" + user.getId() + "'";
+		String sql = "UPDATE usuario SET nombre = '" + user.getNombre() + "', idperfil = '" + user.getPerfil() + "', idempresa = '"+user.getEmpresa()+"' WHERE idusuario = '" + user.getId() + "'";
 		
 		try {
 			con = ConexionSingleton.getConnection();
@@ -194,6 +194,29 @@ public class UserDao implements IDao<User> {
 	}
 	
 
-	
+	public boolean cambiarPassword(User user) {
+		// TODO Auto-generated method stub
+		
+		Connection con = null;
+		Statement stm = null;
+		
+		boolean nuevoPassword = false;
+		
+		String sql = "UPDATE usuario SET password = '" + user.getPassword() + "'WHERE idusuario = '" + user.getId() + "'";
+		
+		try {
+			con = ConexionSingleton.getConnection();
+			stm = con.createStatement();
+			stm.execute(sql);
+			nuevoPassword = true;
+			stm.close();
+		}catch(SQLException e) {
+			System.out.println("Error: Clase UserDao, método cambiarPassword");
+			e.printStackTrace();
+		}
+		
+		return nuevoPassword;
+		
+	}
 	
 }

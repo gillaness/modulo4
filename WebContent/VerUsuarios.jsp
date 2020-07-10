@@ -36,7 +36,9 @@
 			<td>${user.getPerfilNombre()}</td>
 			
 			
-			<td><a href="${pageContext.request.contextPath}/ModificarUser?id=${user.getId()}">Editar</a> &nbsp; <a href="${pageContext.request.contextPath}/BorrarUsuario?id=${user.getId()}">Eliminar</a></td>
+			<td><a href="${pageContext.request.contextPath}/ModificarUser?id=${user.getId()}">Editar</a> &nbsp; 
+			<a href="${pageContext.request.contextPath}/BorrarUsuario?id=${user.getId()}">Eliminar</a> &nbsp;
+			<a href="${pageContext.request.contextPath}/CambiarPassword?id=${user.getId()}">Cambiar Password</a></td>
 			
 		</tr>	
 	</c:forEach>
