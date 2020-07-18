@@ -11,9 +11,6 @@
 <body>
 	<h3>Revisar Agenda</h3>
 	
-	<form method="post">
-		<input type="hidden" name="idUser" value="${sessionScope.Profesional.id}">
-		
 		<table>
 			<tr>
 				<th>Empresa</th>
@@ -32,9 +29,6 @@
 			</tr>
 			</c:forEach>
 		</table>
-		
-		
-	</form>
 	
 	
 </body>
