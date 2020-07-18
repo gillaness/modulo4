@@ -60,8 +60,8 @@ public class CrearRegistroAccidente extends HttpServlet {
 			String areaAccidente = request.getParameter("area");
 			int tipoAccidente = Integer.parseInt(request.getParameter("tipo"));
 			String nombreAccidentado = request.getParameter("accidentado");
-			String idUser = request.getParameter("idUser");
-			int idEmpresa = Integer.parseInt(request.getParameter("idEmpresa"));
+			String idUser = suser.getId();
+			int idEmpresa = suser.getEmpresa();
 
 			
 			Accidente accidente = new Accidente(descripcionAccidente, fechaAccidente, horaAccidente, areaAccidente, tipoAccidente, idUser, idEmpresa, nombreAccidentado);

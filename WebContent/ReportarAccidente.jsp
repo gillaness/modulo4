@@ -13,8 +13,8 @@
 	 
      <form method="post" action="CrearRegistroAccidente">
      
-     	<input type="hidden" name="idUser" value="${sessionScope.Cliente.id}"> <!-- Rescata el id del cliente de esta sesion -->
-		<input type="hidden" name="idEmpresa" value="${sessionScope.Cliente.empresa}"> <!-- Empresa a la que pertenece el usuario Cliente que reporta el accidente -->
+<%--      	<input type="hidden" name="idUser" value="${sessionScope.Cliente.id}"> <!-- Rescata el id del cliente de esta sesion --> --%>
+<%-- 		<input type="hidden" name="idEmpresa" value="${sessionScope.Cliente.empresa}"> <!-- Empresa a la que pertenece el usuario Cliente que reporta el accidente --> --%>
      
 		<table>
 			<tr>

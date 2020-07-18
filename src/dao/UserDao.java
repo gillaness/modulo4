@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -20,15 +21,20 @@ public class UserDao implements IDao<User> {
 		// TODO Auto-generated method stub
 		boolean registrar = false;
 		
-		Statement stm = null;
+		PreparedStatement stm = null;
 		Connection con = null;
 		
-		String sql = "INSERT INTO usuario VALUES ('"+usuario.getId()+"' , '"+usuario.getNombre()+"' ,'"+usuario.getPassword()+"', '"+usuario.getPerfil()+"', '"+usuario.getEmpresa()+"')";
+		String sql = "INSERT INTO usuario VALUES (?, ?, ?, ?, ?)";
 		
 		try {
 			con = ConexionSingleton.getConnection();
-			stm = con.createStatement();
-			stm.execute(sql);
+			stm = con.prepareStatement(sql);
+			stm.setString(1, usuario.getId());
+			stm.setString(2, usuario.getNombre());
+			stm.setString(3, usuario.getPassword());
+			stm.setInt(4, usuario.getPerfil());
+			stm.setInt(5, usuario.getEmpresa());
+			stm.execute();
 			registrar = true;
 			stm.close();
 		}catch(SQLException e) {
