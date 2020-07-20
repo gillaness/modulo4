@@ -29,7 +29,12 @@
 			</tr>
 			</c:forEach>
 		</table>
-	
+	<button onclick="window.location.href='${pageContext.request.contextPath}/Profesional';">
+	Volver
+    </button>
+    
+    <br/>
+		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>
 	
 </body>
 </html>

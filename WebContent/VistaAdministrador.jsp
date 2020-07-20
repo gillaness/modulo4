@@ -17,12 +17,22 @@
                     <td><a href="${pageContext.request.contextPath}/ListadoUsers">Ver Listado de Usuarios</a><td>
                     </tr>
                 </table>
-                
+        <br/>     
     	<h3>Mantencion de Clientes Empresas</h3> 
                 <table>
                     <tr>
                     <td><a href="${pageContext.request.contextPath}/CrearEmpresa">Crear Nuevo Cliente Empresa</a><td>
                     <td><a href="${pageContext.request.contextPath}/ListaEmpresas">Ver Listado de Clientes Empresa</a><td>
+                    </tr>
+                </table>
+                
+         <br/>
+         <h3>Reportes</h3> 
+                <table>
+                    <tr>
+                    <td><a href="#">Reporte Actividad General</a><td>
+                    <td><a href="#">Reporte Actividad por Empresa</a><td>
+                    <td><a href="#">Reporte de Pagos</a><td>
                     </tr>
                 </table>
                 
