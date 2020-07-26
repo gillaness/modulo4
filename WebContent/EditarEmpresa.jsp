@@ -7,6 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>APRL || Editar Empresas</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
 	<div class="contenedor">
@@ -17,7 +18,7 @@
 	</c:if>
 	
 	<form action="ModificarEmpresa" method="post">
-	<table>
+	<%-- <table>
 		<tr>
 		<td><input type="hidden" name="rute" value="${datos.getRutEmpresa()}"></td>
 		</tr>
@@ -41,17 +42,46 @@
 		<td>email</td>
 		<td><input type="text" name="correo" value="${datos.getMailContacto()}"></td>
 		</tr>
-	</table>
+	</table> --%>
+	
+	<div>
+      <input type="hidden" name="rute" value="${datos.getRutEmpresa()}">
+    </div>
+	  <div class="form-group">
+      <label for="empresa">Nombre Empresa</label>
+      <input type="text" class="form-control" placeholder="Nombre Empresa" name="empresa" value="${datos.getNombreEmpresa()}">
+    </div>
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" class="form-control" placeholder="Dirección" name="direccion" value="${datos.getDireccion()}">
+    </div>
+    <div class="form-group">
+      <label for="contacto">Contacto</label>
+      <input type="text" class="form-control" placeholder="Contacto" name="contacto" value="${datos.getContacto()}">
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input type="text" class="form-control" placeholder="Teléfono" name="telefono" value="${datos.getTelefono()}">
+    </div>
+    <div class="form-group">
+      <label for="correo">Email</label>
+      <input type="text" class="form-control" placeholder="Email" name="correo" value="${datos.getMailContacto()}">
+    </div>
+	
 		<br>
-		<input type="submit" value="Modificar">
+		<button type="submit" class="btn btn-primary" value="Modificar">Modificar Empresa</button>
+		<!-- <input type="submit" value="Modificar"> -->
+		<br><br>
 	</form>
 	
-	<button onclick="window.location.href='${pageContext.request.contextPath}/ListaEmpresas';">
+	<button type="submit" onclick="window.location.href='${pageContext.request.contextPath}/ListaEmpresas';" class="btn btn-primary" value="Volver">Volver</button>
+	<%-- <button onclick="window.location.href='${pageContext.request.contextPath}/ListaEmpresas';">
 		Volver
-    	</button>
+    	</button> --%>
     	
-    <br/>
+    	<button type="submit" onclick="window.location.href='${pageContext.request.contextPath}/Logout';" class="btn btn-primary" value="Cerrar Sesión">Cerrar Sesión</button>
+    <%-- <br/>
 		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>
-		</div>
+		</div> --%>
 </body>
 </html>
