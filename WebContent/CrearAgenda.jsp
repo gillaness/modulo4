@@ -40,6 +40,7 @@
 		
 	<form action="CrearAgenda" method="post">
     <div class="form-group">
+    <input type="hidden" name="idUser" value="${sessionScope.Profesional.id}">
       <label for="empresa">Nombre Empresa</label>
       <select name="empresa" class="form-control" placeholder="Nombre Empresa">
       <c:forEach items="${listaempresas}" var="empresa">
@@ -58,7 +59,7 @@
     </div>
     <div class="form-group">
       <label for="tipo">Tipo Visita</label>
-      <select name="perfil" class="form-control" placeholder="Tipo Visita">
+      <select name="tipo" class="form-control" placeholder="Tipo Visita">
 					<option value="1">Asesoría</option>
 			        <option value="2">Capacitación</option>
 			        <option value="3">Asesoría Especial</option>
@@ -66,8 +67,8 @@
     </div>
   
 		<br>
-		<button type="submit" class="btn btn-primary" name="Crear" value="Crear">Crear Agenda</button>
-		<!-- <input type="submit" value="Crear"> -->
+		<button type="submit" class="btn btn-primary" name="crear" value="crear">Crear Agenda</button>
+		<!-- <input type="submit" value="crear"> -->
 		<br><br>
 	</form>
 

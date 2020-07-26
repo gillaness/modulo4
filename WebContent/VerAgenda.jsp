@@ -29,6 +29,7 @@
         <th scope="col">Hora Visita</th>
         <th scope="col">Tipo de Visita</th>
         <th scope="col">Estado</th>
+        <th scope="col">Acciones</th>
         </tr>
         </thead>
 			
@@ -39,6 +40,11 @@
 				<td>${agenda.getHoraVisita()}</td>
 				<td>${agenda.getNombreVisita()}</td>
 				<td>${agenda.getEstatus()}</td>
+			
+			<td><a href="${pageContext.request.contextPath}/ModificarAgenda?id=${user.getRutEmpresa()}">Editar</a> &nbsp; 
+			<a href="${pageContext.request.contextPath}/BorrarListaAgenda?id=${user.getRutEmpresa()}">Eliminar</a> &nbsp;
+			</td>
+				
 			</tr>
 			</c:forEach>
 		</table>
