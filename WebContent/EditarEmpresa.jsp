@@ -81,7 +81,7 @@
     	
     	<button type="submit" onclick="window.location.href='${pageContext.request.contextPath}/Logout';" class="btn btn-primary" value="Cerrar Sesión">Cerrar Sesión</button>
     <%-- <br/>
-		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>
-		</div> --%>
+		<a href="${pageContext.request.contextPath}/Logout">Cerrar sesión</a><br/>--%>
+		</div> 
 </body>
 </html>

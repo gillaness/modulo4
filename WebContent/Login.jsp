@@ -64,8 +64,8 @@
     <button type="submit" class="btn btn-primary" value="Ingresar">Ingresar</button>
   </form>
   <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="https://i.makeagif.com/media/2-11-2016/T17EEh.gif">¿Nuevo por aquí?, Regístrate.</a>
-  <a class="dropdown-item" href="https://media.tenor.com/images/e2594372cddbb9263385aeb5369cddc1/tenor.gif">¿Se te olvidó tu contraseña?, Te ayudamos.</a>
+  <a class="dropdown-item" href="${pageContext.request.contextPath}/Registrate.jsp">¿Nuevo por aquí?, Regístrate.</a>
+  <a class="dropdown-item" href="${pageContext.request.contextPath}/Ayuda.jsp">¿Se te olvidó tu contraseña?, Te ayudamos.</a>
 </div>
 </body>
 

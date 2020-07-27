@@ -74,19 +74,27 @@
 					<option value="3">Fatal</option>
 	  </select>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="detalleaccidente">Descripción de Accidente</label>
       <input type="text" class="form-control" placeholder="Favor escribe aquí los detalles del accidente. (Descripción de Accidente.)" name="detalleaccidente" cols="50" rows="15">
-    </div>
+    </div> -->
     
+    <div class="was-validated">
+    <div class="mb-3">
+    <label for="detalleaccidente">Descripción de Accidente</label>
+    <textarea type="text" class="form-control is-invalid" id="detalleaccidente" placeholder="Descripción de Accidente" required></textarea>
+    <div class="invalid-feedback">
+      Favor escribir los detalles del accidente...
+    </div>
+    </div>
+    </div>
 		
-		<br>
 		<button type="submit" class="btn btn-primary" name="reporteaccidente" value="Enviar Reporte de Accidente">Enviar Reporte de Accidente</button>
 		<!-- <input type="submit" name="reporteaccidente" value="Enviar Reporte de Accidente"> -->
 	
 	</form>
 	
-	<br><br>
+	<br>
 	 <button type="submit" onclick="window.location.href='${pageContext.request.contextPath}/Cliente';" class="btn btn-primary" value="Volver">Volver</button>
 	<%-- <button onclick="window.location.href='${pageContext.request.contextPath}/Cliente';">
 	Volver
