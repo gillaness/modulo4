@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <!-- <div class="radionomy-player"></div>
+  <audio src="/CoffinDance.mp3" preload="auto" controls></audio> -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="Inicio.jsp">APRL</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +28,7 @@
         <a class="nav-link" href="Galeria.jsp">Servicios</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="/Diagramas" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Diagramas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -36,10 +39,15 @@
           <a class="dropdown-item" href="/APRL/Diagramas/Diagrama de caso de uso APRL.pdf">Caso de uso APRL</a>
         </div>
       </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="Login.jsp" tabindex="-1" aria-disabled="true">Iniciar Sesión</a>
       </li>
     </ul>
+    
+    <div class="radionomy-player"></div>
+    <audio src="CoffinDance.mp3" preload="auto" controls></audio>
+    
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
@@ -61,4 +69,5 @@
 <img src="https://i.gifer.com/TyxC.gif" class="img-fluid" alt="Responsive image">
 
 </body>
+
 </html>
